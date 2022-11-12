@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenIdoc</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="启智社区开发者使用文档">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/fontawesome.min.css" integrity="sha512-R+xPS2VPCAFvLRy+I4PgbwkWjw1z5B5gNDYgJN5LfzV4gGNeRQyVrY7Uk59rX+c8tzz63j8DeZPLqmXvBxj8pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/solid.min.css" integrity="sha512-EvFBzDO3WBynQTyPJI+wLCiV0DFXzOazn6aoy/bGjuIhGCZFh8ObhV/nVgDgL0HZYC34D89REh6DOfeJEWMwgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+
+
+</head>
+<body>
+  <nav>
+    <a href="https://git.openi.org.cn/chenzh/opendoc/issues/new" style="font-family:Hei">意见反馈</a>
+    <a href="https://git.openi.org.cn/" style="font-family: Hei">回到启智社区</a>
+  </nav>
+  <div id="app" style="transform:scale(0.8,0.8);">喝杯咖啡休息一下，马上回来</div>
+  <script>
+    window.$docsify = {
+      name: '<p style= "font-family:Sans-serif;font-size:5;color:#2da64d;font-weight:bold">启智社区文档</p>',
+      nameLink: '/',
+      loadSidebar: true,
+      auto2top: true,
+      subMaxLevel: 3,
+      themeColor: '#2da64d',
+      topMargin: 20,
+
+
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 4,
+        hideOtherSidebarContent: true,
+        namespace: 'OpenDoc'
+      },
+
+      pagination: {
+        previousText: '上一卷',
+        nextText: '下一卷',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      copyCode: {
+        buttonText : '复制到剪切板',
+        errorText  : '错误',
+        successText: '复制成功'
+      },
+
+      tabs: {
+        theme:'material',
+        persist:'false',
+        sync:'false',
+      },
+
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- pagination plugin-->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- search plugin-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- img zoom plugin-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- tabs -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script> 
+  <!-- code clipboard -->
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <!-- text highlight -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- code highlight -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <!-- emoji --> 
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- gif-->
+  <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script>
+
+  <!-- plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- docsify-select (latest v1.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-select@1"></script>
+  <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+
+
+  
+</body>
+</html>
