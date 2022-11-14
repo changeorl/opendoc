@@ -8,7 +8,7 @@
     - 你可以使用蓝色按钮的网页UI，通过 **在线创建** 或 **手动上传文件** 来提交代码
     - 你也可以使用 **http** 或 **ssh** 地址 通过 **Git** 来提交代码
 
-<img src="_media/quickstart/repo_home.png" width = "800" alt="homepage" align=center />
+<img src="_media/quickstart/repo_upload_shade.png" width = "600" alt="homepage" align=center />
 
 
 ## 网页提交
@@ -20,7 +20,9 @@
 
 <img src="_media/quickstart/repo_code.png" width = "800" alt="homepage" align=center />
 
- <img src="_media/quickstart/repo_pr.png" width = "800" alt="homepage" align=center />
+<br>
+
+ <img src="_media/quickstart/repo_pr_shade.png" width = "500" alt="homepage" align=center />
 
 ### 上传提交
 
@@ -49,13 +51,11 @@
 
 <img src="_media/repo/gitinstallnoedge.png" width = "400" alt="homepage" align=center />
 
-- 下载完成后，根据安装程序指引完成安装。使用`Git Bash.exe`（下左）命令行进行Git操作
-- 你也可以使用其他的命令行工具，如 `Windows Powershell`（下右），详情参照[微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2) 
+- 下载完成后，根据安装程序指引完成安装。使用`Git Bash.exe`命令行进行Git操作
 
 <img src="_media/repo/gitbash.png" width = "400" alt="homepage" align=center />
 
-<img src="_media/repo/gitpowershell.png" width = "400" alt="homepage" align=center />
-
+*你也可以使用其他的命令行工具，如 `Windows Powershell`，详情参照[微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2)*
 
 #### **Mac**
 
@@ -111,7 +111,7 @@ $ brew install git-gui
 
 ```shell
 #克隆代码仓
-$ git clone https://git.openi.org.cn/chenzh/quickstart.git
+$ git clone https://openi.pcl.ac.cn/chenzh/quickstart.git
 $ cd quickstart
 
 #提交代码
@@ -135,7 +135,7 @@ $ git config --global credential.helper store
 
 ```shell
 #克隆代码仓
-$ git clone git@git.openi.org.cn:chenzh/quickstart.git
+$ git clone git@openi.pcl.ac.cn:chenzh/quickstart.git
 $ cd quickstart
 
 #提交代码

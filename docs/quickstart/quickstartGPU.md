@@ -32,6 +32,10 @@
 
  <img src="_media/quickstart/repo_home.png" width = "800" alt="homepage" align=center />
 
+<br>
+
+ <img src="_media/quickstart/repo_upload_shade.png" width = "500" alt="homepage" align=middle />
+
 #### **示例代码**
 
 ``` python
@@ -140,7 +144,9 @@ if __name__ == '__main__':
 
  <img src="_media/quickstart/repo_code.png" width = "800" alt="homepage" align=center />
 
- <img src="_media/quickstart/repo_pr.png" width = "800" alt="homepage" align=center />
+<br>
+
+ <img src="_media/quickstart/repo_pr_shade.png" width = "500" alt="homepage" align=center />
 
 <!-- tabs:end -->
 
@@ -184,11 +190,11 @@ if __name__ == '__main__':
 > [!note|label:填写以下参数|icon:fa-solid fa-list fa-bounce]
 > - **算力集群** 启智集群
 > - **计算资源** CPU/GPU
-> - **任务名称** 可自行定义
-> - **镜像** *cuda111_python37_pytorch191* 或直接复制 *dockerhub.pcl.ac.cn:5000/user-images/openi:cuda111_python37_pytorch191*
+> - **任务名称** mnis_pytorch_gpu
+> - **镜像** 复制并粘贴地址 *dockerhub.pcl.ac.cn:5000/user-images/openi:cuda111_python37_pytorch191*
 > - **启动文件** *train.py*
-> - **数据集** *MnistDataset_torch.zip*
-> - **资源规格** 默认选择 *GPU:1A100, CPU:4,内存:32GB,共享内存16GB*
+> - **数据集** 请搜索并关联 *MnistDataset_torch.zip*
+> - **其他配置保持默认值即可**
 
  <img src="_media/quickstart/train_detail.png" width = "800" alt="homepage" align=center />
 
