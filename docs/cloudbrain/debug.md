@@ -3,7 +3,8 @@
 <img src="_media/cloudbrain/debug/start.png" width = "800" alt="traindetail" align=middle />
 
 >[!tip|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
-> - 在调试代码中使用数据集时，请使用绝对路径，如 `/dataset/数据集解压文件夹/`
+> - 在GPU调试代码中使用数据集时，请使用绝对路径，如 `/dataset/数据集解压文件夹/`
+> - 在NPU调试代码中使用数据集时，需要使用 `wget` 与 `unzip` 命令行指令下载解压数据集
 > - 建议使用清华镜像安装Python包以及搭建Anaconda，详情请查看[清华镜像官方](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
 > - 调试任务的时长限制为4小时，未关闭的调试任务将在4小时后自动关闭
 
@@ -19,7 +20,7 @@
 ### GPU 新建调试任务
 *点击新建调试任务，在弹窗中配置下列信息来启动调试任务，其余字段可保持默认设置*
 - **计算资源**: 选择 `CPU/GPU`
-- **任务名称**：只能包含 `小写字母，数字，以及下划线`
+- **任务名称**：只能包含 `小写字母，数字，以及下划线与连接号`
 - **镜像**：可以选择任意 `平台镜像` 或者使用 `外部镜像`，粘贴镜像链接到框内即可
 - **数据集**：点击 `选择数据集` 即可选择数据集
     - 数据集可 `多选` ，在弹窗中选中多个数据集即可
@@ -165,18 +166,88 @@ torch.cuda.is_available()
 
 > [!tip|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经成功在GPU环境下启用调试任务并读取数据。\
-> 你可以[回到顶部](/cloudbrain/debug.md#npu)查看NPU的调试任务介绍，或者点击下一卷前往训练任务介绍
+> 你可以[回到顶部](/cloudbrain/debug.md#npu-新建调试任务)查看NPU的调试任务介绍，或者点击下一卷前往镜像介绍
 
 
 
 #### **NPU**
 
-#### NPU 新建
+### NPU 新建调试任务
 
-#### NPU 控制台
+*点击新建调试任务，在弹窗中配置下列信息来启动调试任务，其余字段可保持默认设置*
+- **计算资源**: 选择 `NPU`
+- **任务名称**：只能包含 `小写字母，数字，以及下划线与连接号`
+- **镜像**：只能选择 `平台镜像`，提供 `TensorFlow` 和 `Mindspore`
+- **数据集**：点击 `选择数据集` 即可选择数据集
+    - 数据集可 `多选` ，在弹窗中选中多个数据集即可
+    - 你可以使用 `本项目数据集` 或 `关联数据集`，你也可以在调试代码里下载 `外部数据集`
+    - 此选项可以为 `空白` ，即不使用数据集
+- **资源规格**：任意选择你想要的资源规格
 
-#### NPU Notebook
+<img src="_media/cloudbrain/debug/npu_create.png" width = "800" alt="traindetail" align=middle />
 
-#### NPU Terminal
+### NPU Jupyter Lab 控制台
+
+*与GPU调试任务，NPU调试也提供Jupyter Lab控制台*
+
+<img src="_media/cloudbrain/debug/npu_lab.png" width = "800" alt="traindetail" align=middle />
+
+### NPU 代码与数据下载
+
+*NPU调试任务的文件路径与GPU并不相同，代码仓与数据集也需要你手动下载到调试环境*
+
+- NPU调试任务需要手动下载代码仓与数据集
+- 你不需要改变NPU调试环境的工作目录，所有文件都应放在默认路径下
+
+<img src="_media/cloudbrain/debug/npu_path.png" width = "800" alt="traindetail" align=middle />
+
+
+- 在控制台中，点击左侧搜索框上方最左边的Git图标，输入代码仓地址
+- 你也可以在 Terminal 中使用 git clone 来克隆代码仓
+
+<img src="_media/cloudbrain/debug/npu_git.png" width = "800" alt="traindetail" align=middle />
+
+- 在调试任务列表点击任务名称，在详情页可以找到数据集下载链接
+
+<img src="_media/cloudbrain/debug/npu_datalink.png" width = "800" alt="traindetail" align=middle />
+
+- 输入下列命令行指令，使用 wget -O 自定义数据集名称 下载地址 来下载数据集压缩包
+
+```shell
+wget -O dataset 'https://open-data.obs.cn-south-222.ai.pcl.cn:443/attachment/2/1/21f17b25-2a3e-4b42-a717-5547b72036cd/imagenet-sample.zip?response-content-disposition=attachment%3B+filename%3D%22imagenet-sample.zip%22&AWSAccessKeyId=ZSCXA9TLRN1USYWIF7A5&Expires=1668419095&Signature=xcL10IAPRSjAkEjNlITwD3CsFXM%3D'
+```
+
+<img src="_media/cloudbrain/debug/npu_data.png" width = "800" alt="traindetail" align=middle />
+
+- 下载完成后，你还需要输入下列命令行指令将数据集解压到当前目录
+
+```shell
+unzip dataset
+```
+
+### NPU 调试任务示例
+
+- 新建 `Notebook` 文件，将下列代码拷贝并运行，若成功打印图片数据维度与图片，则数据读取成功
+- 请注意，与GPU调试任务不同，NPU的数据路径为当前目录，不需要使用绝对路径
+
+```python
+import matplotlib.pyplot as plt # plt 用于显示图片
+import matplotlib.image as mpimg # mpimg 用于读取图片
+import numpy as np
+
+sample = mpimg.imread('imagenet-sample/train/n01986214/n01986214_15101.JPEG')
+print(sample.shape)
+
+plt.imshow(sample) # 显示图片
+plt.axis('off') # 不显示坐标轴
+plt.show()
+```
+
+<img src="_media/cloudbrain/debug/npu_code.png" width = "800" alt="traindetail" align=middle />
+
+> [!tip|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
+> 🎉 恭喜你！你已经成功在NPU环境下启用调试任务并读取数据。\
+> 你可以[回到顶部](/cloudbrain/debug.md#gpu-新建调试任务)查看GPU的调试任务介绍，或者点击下一卷前往镜像介绍
 
 <!-- tabs:end -->
+

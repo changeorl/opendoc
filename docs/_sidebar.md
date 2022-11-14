@@ -18,7 +18,6 @@
 - 数据集
     - [上传数据](dataset/upload.md)
     - [关联数据](dataset/link.md)
-    - [数据使用示例](dataset/usage.md)
 
 - 云脑
     - [调试](cloudbrain/debug.md)
