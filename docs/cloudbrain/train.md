@@ -1,5 +1,9 @@
 # 训练任务
 
+> [!tip]
+> - 训练任务同推理任务的流程一致
+> - 唯一不同的是推理任务需要你预先导入模型到项目中
+
 <img src="_media/cloudbrain/train/model_home.png" width = "800" alt="traindetail" align=middle />
 
 ## 训练任务代码
