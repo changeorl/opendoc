@@ -31,4 +31,5 @@
 
 - 其他
     - [个人设置](/user/user.md)
-    - [F&Q](/user/group.md)
+    - [FAQ](/user/group.md)
+    - [文档层级](hierarchy.md)
