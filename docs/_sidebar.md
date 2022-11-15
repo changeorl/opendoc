@@ -30,12 +30,6 @@
     - [模型转换](/model/convert.md)
     - [模型体验](/model/space.md)
 
-- 用户
+- 其他
     - [个人设置](/user/user.md)
-    - [团队协作](/user/group.md)
-
-
-- [文档模版测试](/plugin.md)
-
-
-- [hierarchy](/structures.md)
+    - [F&Q](/user/group.md)

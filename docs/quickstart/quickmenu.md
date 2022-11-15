@@ -5,26 +5,40 @@
 
 <!-- tabs:start -->
 
+#### ****
+
+- [平台介绍](intro/intro.md)
+- [资源说明](into/resources.md)
+
 #### **项目**
 
 - [创建项目](repo/create.md)
 - [代码提交](repo/code.md)
 - [任务&合并请求](repo/pr.md)
-- [个人中心](repo/center.md)
+- 个人中心
 
 #### **数据集**
 
 - [数据上传](dataset/upload.md)
 - [关联数据](dataset/link.md)
-- [数据使用示例](dataset/usage.md)
 
 #### **云脑**
 
+- [调试任务](cloudbrain/debug.md)
+- [镜像](cloudbrain/mirror.md)
+- [训练/推理任务](cloudbrain/train.md)
+- [评测任务](cloudbrain/eval.md)
 
 #### **模型**
 
+- [在线导入](model/import.md)
+- 本地上传
+- [模型转换](model/convert.md)
+- [模型体验](modell/space.md)
 
 #### **其他**
 
+- 用户设置
+- 常见问题
 
 <!-- tabs:end -->
