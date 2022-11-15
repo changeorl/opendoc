@@ -8,7 +8,7 @@
 
 - 查看 [快速开始](quickstart/quickstartGPU.md) 了解详情，五分钟上手运行一个GPU训练实例。
 - 如果你已经有经验，可以查看 [文档速览](quickstart/quickmenu.md) 快速定位你想要浏览的功能文档。
-
+- 你可以点击文档右上角的 [意见反馈](https://git.openi.org.cn/chenzh/opendoc/issues/new) 帮助改进本文档内容
 <br>
 
 <br>

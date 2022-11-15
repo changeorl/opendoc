@@ -1,9 +1,8 @@
 <!-- docs/_sidebar.md -->
 
-- [文档速览](quickstart/quickmenu.md)
-
 - 快速开始
     - [PyTorch手写识别GPU训练](quickstart/quickstartGPU.md)
+    - [文档速览](quickstart/quickmenu.md)
 
 - 平台介绍
     - [启智社区](intro/intro.md)
