@@ -1,8 +1,8 @@
-# OpenI Documentation
+# :fa-solid fa-file-lines: 启智社区文档
 
 > 欢迎来到OpenI启智社区开发者文档。
 
-### :fas fa-home fa-fw: 概述
+### 概述
 
 本文档介绍了`启智AI协作平台`的功能使用说明，以便开发者在使用本平台时能有参照和指南。
 
