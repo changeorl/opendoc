@@ -109,6 +109,8 @@ $ brew install git-gui
 - 使用 `https` 地址克隆项目，操作 `git pull/push` 到远程仓库的时候需要输入账号密码
 - 你可以输入 `git config --global credential.helper store` 保存登录信息，首次输入后，便不再需要输入账号密码
 
+<img src="_media/repo/git_http.png" width = "400" alt="homepage" align=center />
+
 ```shell
 #克隆代码仓
 $ git clone https://openi.pcl.ac.cn/chenzh/quickstart.git

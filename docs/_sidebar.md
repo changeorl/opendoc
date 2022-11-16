@@ -12,6 +12,7 @@
     - [创建项目](repo/create.md)
     - [代码提交](repo/code.md)
     - [任务与合并请求](repo/pr.md)
+    - [个人中心](repo/center.md)
 
 - 数据集
     - [上传数据](dataset/upload.md)
@@ -30,6 +31,6 @@
     - [模型体验](/model/space.md)
 
 - 其他
-    - [个人设置](/user/user.md)
+    - [用户设置](/user/user.md)
     - [FAQ](/user/group.md)
     - [文档层级](hierarchy.md)
