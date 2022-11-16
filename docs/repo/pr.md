@@ -16,7 +16,7 @@
 <img src="_media/repo/issuecreate.png" width = "800" alt="homepage" align=center />
 
 - 点击任务可进入详情页，在这里你可以与项目的协作者跟进 `任务进度`
-- 当一个任务被完成的时候，你可以将其 `关闭`，只需要点击任务名称，在见面最下面点击关闭即可
+- 当一个任务被完成的时候，你可以将其 `关闭`，只需要点击任务名称，在最下面点击关闭即可
 
 <img src="_media/repo/issuedetail.png" width = "800" alt="homepage" align=center />
 

@@ -6,7 +6,7 @@
 
 <img src="_media/model/import-create.png" width = "800" alt="traindetail" align=middle />
 
-- 导入模型之后，便可在推理任务中选择你要是用的模型
+- 导入模型之后，便可在推理任务中选择你要使用的模型
 - 在模型列表你可以进行删除，下载等操作
 
 <img src="_media/model/import-list.png" width = "800" alt="traindetail" align=middle />

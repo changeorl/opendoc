@@ -85,8 +85,7 @@ batch_size = args.batch_size
 
 #### **GPU训练**
 
-- 你可以在训练简况中查看云脑训练信息
-- 日志中为训练脚本代码的输出
+- 你可以在日志中查看训练任务详情
 - 若需要输出下载模型文件，请在代码中保存到 **/model** 路径，然后在详情下载界面下载
 
 <img src="_media/cloudbrain/train/gpu_detail.png" width = "800" alt="traindetail" align=middle />

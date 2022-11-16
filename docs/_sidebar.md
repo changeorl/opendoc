@@ -31,6 +31,7 @@
     - [模型体验](/model/space.md)
 
 - 其他
-    - [用户设置](/user/user.md)
-    - [FAQ](/user/group.md)
-    - [文档层级](hierarchy.md)
+    - [用户设置](/others/user.md)
+    - [文档层级](/others/hierarchy.md)
+
+- [常见问题](FAQ.md)

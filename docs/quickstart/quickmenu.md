@@ -17,7 +17,7 @@
 - [创建项目](repo/create.md)
 - [代码提交](repo/code.md)
 - [任务&合并请求](repo/pr.md)
-- 个人中心
+- [个人中心](repo/center.md)
 
 #### **数据集**
 
@@ -40,7 +40,7 @@
 
 #### **其他**
 
-- 用户设置
-- 常见问题
+- [用户设置](user/user.md)
+- [常见问题](user/FAQ.md)
 
 <!-- tabs:end -->
