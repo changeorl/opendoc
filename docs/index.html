@@ -5,23 +5,37 @@
   <title>OpenIdoc</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="启智社区开发者使用文档">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
   <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.2.0/css/all.css" rel="stylesheet">
 
+  <style>
+    body{
+      font-size: 13px;
+    }
+    .markdown-section h1 {
+      font-size: 25px;
+    }
+    .markdown-section h2 {
+      font-size: 20px;
+    }
+    .markdown-section h3 {
+      font-size: 15px;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <a href="https://git.openi.org.cn/chenzh/opendoc/issues/new" style="font-family:Hei">意见反馈</a>
-    <a href="https://git.openi.org.cn/" style="font-family: Hei">回到启智社区</a>
+    <a href="https://git.openi.org.cn/chenzh/opendoc/issues/new" style="font-family:Hei; font-size:13px">意见反馈</a>
+    <a href="https://git.openi.org.cn/" style="font-family: Hei; font-size:13px">回到启智社区</a>
   </nav>
   <div id="app" style="transform:scale(0.8,0.8);">喝杯咖啡休息一下，马上回来</div>
   <script>
     window.$docsify = {
       name: '<p style= "font-family:Sans-serif;font-size:5;color:#539869;font-weight:bold"><i class="fa-solid fa-file-lines fa-beat"></i> 启智社区文档</p>',
-      nameLink: '/opendoc/#',
+      nameLink: '/',
       loadSidebar: true,
       auto2top: true,
       subMaxLevel: 2,
