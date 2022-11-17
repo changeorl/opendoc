@@ -2,7 +2,7 @@
 
 <img src="_media/cloudbrain/debug/start.png" width = "800" alt="traindetail" align=middle />
 
->[!tip|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
+>[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
 > - 在GPU调试代码中使用数据集时，请使用绝对路径，如 `/dataset/数据集解压文件夹/`
 > - 在NPU调试代码中使用数据集时，需要使用 `wget` 与 `unzip` 命令行指令下载解压数据集
 > - 建议使用清华镜像安装Python包以及搭建Anaconda，详情请查看[清华镜像官方](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
@@ -164,7 +164,7 @@ torch.cuda.is_available()
 
 <img src="_media/cloudbrain/debug/gpu_torch.png" width = "800" alt="traindetail" align=middle />
 
-> [!tip|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
+> [!note|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经成功在GPU环境下启用调试任务并读取数据。\
 > 你可以[回到顶部](/cloudbrain/debug.md#npu-新建调试任务)查看NPU的调试任务介绍，或者点击下一卷前往镜像介绍
 
@@ -245,7 +245,7 @@ plt.show()
 
 <img src="_media/cloudbrain/debug/npu_code.png" width = "800" alt="traindetail" align=middle />
 
-> [!tip|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
+> [!note|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经成功在NPU环境下启用调试任务并读取数据。\
 > 你可以[回到顶部](/cloudbrain/debug.md#gpu-新建调试任务)查看GPU的调试任务介绍，或者点击下一卷前往镜像介绍
 

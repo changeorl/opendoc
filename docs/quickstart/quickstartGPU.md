@@ -1,13 +1,13 @@
 
 # 快速开始: PyToch手写识别GPU训练任务实例
 
-> 在本篇中，你将快速学会如何创建项目，并开启一个GPU训练任务。
+> 在本篇中，你将快速学会如何创建项目，并开启一个GPU训练任务。本教程参考 [代码仓](https://openi.pcl.ac.cn/OpenIOSSG/MNIST_PytorchExample_GPU)。
 
 ## 创建项目
 
 首先你需要注册一个启智社区的账号。
 
-> [!tip|label: 加入我们！|icon:fa-solid fa-user fa-bounce]
+> [!note|label: 加入我们！|icon:fa-solid fa-user fa-bounce]
 > 现在就加入启智社区，尽享普惠算力。[立即注册](https://git.openi.org.cn/user/sign_up)
 
 - 注册成功之后，请 [点击这里](https://git.openi.org.cn/repo/create) 创建新项目。
@@ -32,13 +32,11 @@
 
  <img src="_media/quickstart/repo_home.png" width = "800" alt="homepage" align=center />
 
-<br>
-
- <img src="_media/quickstart/repo_upload_shade.png" width = "500" alt="homepage" align=middle />
-
 #### **示例代码**
 
 ``` python
+
+# 导入包
 import numpy as np
 import torch
 from torchvision.datasets import mnist
@@ -51,6 +49,7 @@ from torch.nn import Module
 from torch import nn
 
 
+# 定义网络结构
 class Model(Module):
     def __init__(self):
         super(Model, self).__init__()
@@ -84,29 +83,38 @@ class Model(Module):
         return y
 
 
-# Training settings
+# 训练参数控制
 parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
-#The dataset location is placed under /dataset
 parser.add_argument('--traindata', default="/dataset/train" ,help='path to train dataset')
 parser.add_argument('--testdata', default="/dataset/test" ,help='path to test dataset')
 parser.add_argument('--epoch_size', type=int, default=1, help='how much epoch to train')
 parser.add_argument('--batch_size', type=int, default=256, help='how much batch_size in epoch')
 
 if __name__ == '__main__':
+    # 读取参数
     args, unknown = parser.parse_known_args()
-    #log output
-    print('cuda is available:{}'.format(torch.cuda.is_available()))  
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     batch_size = args.batch_size
+    epoch = args.epoch_size
+
+    # 日志输出
+    print('epoch_size is:{}'.format(epoch))
+    print('cuda is available:{}'.format(torch.cuda.is_available())) 
+
+    # 使用GPU 
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+    # 读取数据集
     train_dataset = mnist.MNIST(root=args.traindata, train=True, transform=ToTensor(),download=False)
     test_dataset = mnist.MNIST(root=args.testdata, train=False, transform=ToTensor(),download=False)
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     test_loader = DataLoader(test_dataset, batch_size=batch_size)
+    
+    # 定义模型（使用上述定义，并切换成GPU模式），优化算法（SGD随机梯度下降），损失函数（交叉熵损失函数）
     model = Model().to(device)
     sgd = SGD(model.parameters(), lr=1e-1)
     cost = CrossEntropyLoss()
-    epoch = args.epoch_size
-    print('epoch_size is:{}'.format(epoch))
+
+    # 批量训练
     for _epoch in range(epoch):
         print('the {} epoch_size begin'.format(_epoch + 1))
         model.train()
@@ -122,6 +130,7 @@ if __name__ == '__main__':
             loss.backward()
             sgd.step()
 
+        # 每次训练迭代后，使用test数据评估模型准确率
         correct = 0
         _sum = 0
         model.eval()
@@ -135,6 +144,8 @@ if __name__ == '__main__':
             correct += np.sum(_.numpy(), axis=-1)
             _sum += _.shape[0]
         print('accuracy: {:.2f}'.format(correct / _sum))
+
+        # 每次训练迭代后，保存当前模型参数
         #The model output location is placed under /model
         #state = {'model':model.state_dict(), 'optimizer':sgd.state_dict(), 'epoch':epoch}
         torch.save(model, '/model/pytroch.pth')
@@ -177,8 +188,6 @@ if __name__ == '__main__':
 
 接下来创建云脑训练任务，在项目里找到 **云脑** -> **训练任务** -> **新建训练任务**。
 
-
-
 <!-- tabs:start -->
 
 #### **创建训练**
@@ -188,12 +197,12 @@ if __name__ == '__main__':
 #### **参数配置**
 
 > [!note|label:填写以下参数|icon:fa-solid fa-list fa-bounce]
-> - **算力集群** 启智集群
-> - **计算资源** CPU/GPU
-> - **任务名称** mnis_pytorch_gpu
+> - **算力集群** *启智集群*
+> - **计算资源** *CPU/GPU*
+> - **任务名称** *mnis_pytorch_gpu*
 > - **镜像** 复制并粘贴地址 *dockerhub.pcl.ac.cn:5000/user-images/openi:cuda111_python37_pytorch191*
 > - **启动文件** *train.py*
-> - **数据集** 请搜索并关联 *MnistDataset_torch.zip*
+> - **数据集** *本项目关联 MNIST/MnistDataset_torch.zip*
 > - **其他配置保持默认值即可**
 
  <img src="_media/quickstart/train_detail.png" width = "800" alt="homepage" align=center />
@@ -238,5 +247,5 @@ if __name__ == '__main__':
 
 <!-- tabs:end -->
 
-> [!tip|label:新手教程完成|icon:fa-solid fa-check fa-beat]
+> [!note|label:新手教程完成|icon:fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经完成了一个简单的GPU训练任务。点击右侧的下一卷查看更多功能。

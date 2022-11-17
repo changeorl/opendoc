@@ -9,7 +9,7 @@
 
 ## 创建镜像
 
->[!attention|label:注意|icon:fa-solid fa-circle-exclamation fa-beat-fade]
+>[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
 > - 目前只有GPU环境支持创建镜像，NPU环境只能使用平台提供 `Tensorflow` 与 `Mindspore` 两种镜像
 > - `/dataset` 下的数据集文件也将一并提交到新镜像，但是 `/code` 与 `/model` 下的文件不会
 

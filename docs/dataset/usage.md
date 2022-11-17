@@ -78,7 +78,7 @@ plt.show()
 
 <img src="_media/dataset/usagejupyter.png" width = "800" alt="traindetail" align=middle />
 
-> [!tip|label:数据使用教程完成|icon:fa-sharpe fa-solid fa-check fa-beat]
+> [!note|label:数据使用教程完成|icon:fa-sharpe fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经成功在GPU环境下启用调试任务并读取数据。\
 > 请点击右侧的下一卷查看更多关于调试任务的介绍
 

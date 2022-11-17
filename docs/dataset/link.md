@@ -16,7 +16,7 @@
 ## 公开数据集
 
 - `公开/私有` 选项将决定其他用户能否看见并关联你的数据集
-> [!warning|label:数据集权限|icon:fa-sharp fa-solid fa-lock fa-bounce]
+> [!note|label:数据集权限|icon:fa-sharp fa-solid fa-lock fa-bounce]
 > - 私人项目将不会有此选项，因为数据集和项目是绑定的
 > - 如果你想 **公开项目** 但 **不公开数据集** ，将所有打包文件设为私有即可
 > - 你可以选择只 **公开部分** 数据，其他用户只会看见数据集内公开的打包文件

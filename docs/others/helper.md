@@ -11,12 +11,12 @@
 # npm i docsify-cli -g
 ```
 
->[!warning|label:安装须知|icon:fa-solid fa-download]
+>[!note|label:安装须知|icon:fa-solid fa-download fa-bounce]
 > - 安装 `Docsify` 需要使用到 `Node.js` 中的 `npm` 指令
 > - `npm` 是随同 `Node.js` 一起安装的包管理工具，你可以使用 `npm -v` 来查看其是否安装在你的电脑上
 > - 若你的电脑未安装 `Node.js`，请移步至 [Node.js官方下载地址](https://nodejs.org/zh-cn/download/) 下载安装
 
-来到代码仓目录，输入下列指令启动本地服务  *下列 /.../ 为你的本地电脑存放目录* <br>
+来到代码仓目录，输入下列指令启动本地服务  <br>
 
 在浏览器打开 http://localhost:3000 即可看到本地启动的文档
 
@@ -24,7 +24,7 @@
 # cd opendoc
 # docsify serve ./docs
 
-Serving /.../opendoc/docs now. 
+Serving /你的本地电脑目录/opendoc/docs now. 
 Listening at http://localhost:3000
 ```
 
@@ -55,10 +55,6 @@ Listening at http://localhost:3000
 - `_media/` 文件夹下存放文档内使用的图片素材
 - 其余文件，如上示例中 `repo/` 为文档各层级目录，里面存放的每个 `Markdown` 文件为单独文档页面
 
->[!tip|label:内容修改|icon:fa-solid fa-pen fa-bounce]
-> - 若只涉及到文档的文本内容修改，你可以在 `_sidebar.md` 中找到想要修改章节的 `.md` 文件路径
-> - 根据文件路径，打开 `.md` 文件，使用 `Markdown` 语法修改内容后保存提交代码即可
-
 ## 修改侧边栏
 
 - 在 `_sidebar.md` 中编辑侧边栏菜单，格式为 `Markdown` 语法列表结构
@@ -72,14 +68,14 @@ Listening at http://localhost:3000
     - [文档速览](quickstart/quickmenu.md)
 ```
 
-## 修改文档-文本编写
+## 修改文档
 
-- 使用 `Markdown` 语法修改即可，建议遵循如下规则
+- 在 `_sidebar.md` 中找到文档路径，使用 `Markdown` 语法修改 `.md` 文件即可，建议遵循如下规则
     - 避免编写大段文字内容，尽量使用简短的文字说明，可以使用列表结构增加可读性
     - 文档内二级标题在点击文档名称时会在侧边栏展开，点击可快速跳转到相应部分
-    - 使用代码高亮功能Highlight关键字
+    - 使用代码高亮功能 `Highlight` 关键字
 
-## 修改文档-插入图片
+## 插入图片
 
 - 本文档使用嵌入html语法插入图片
     - 请将图片放入 `_media/` 文件夹下，在 `src` 中填入图片路径，建议其他参数保持不变
@@ -90,80 +86,46 @@ Listening at http://localhost:3000
 <img src="_media/openi/home.png" width = "600" alt="homepage" align=center/>
 ```
 
-## 修改文档-引用
+## 插入提示框
 
-- `Docsify` 提供了三种引用方法，如下所示
+本文档中使用了提示框插件，默认用法如下
 
 ```markdown
-> 这是 Markdown 默认引用
-!> 这是 Docsify 警示引用
-?> 这是 Docsify 高亮引用
+>[!note]
+> 这是提示框规范样式，内部也支持 `Markdown` 语法
 ```
 
-> 这是Markdown默认引用
+>[!note]
+> 这是提示框规范样式，内部也支持 `Markdown` 语法
 
-!> 这是 Docsify 警示引用
+你可以自定义提示框展示其他信息，注意参数分割符 `|` 为英文符号且前后不能有空格
 
-?> 这是 Docsify 高亮引用
+```markdown
+>[!note|label:自定义名称|icon:fa-solid fa-wand-magic-sparkles]
+> 这是自定义了 `名称` 和 `图标` 的提示框
+```
 
-## 修改文档-提示框
-
-- 本文档中使用了提示框插件，可插入定制化高亮提示框
-
-<img src="_media/alert.jpeg" width = "600" alt="homepage" align=center/>
-
-- 提示框提供两种样式和四种颜色，可定制名称和图标
+>[!note|label:自定义名称|icon:fa-solid fa-wand-magic-sparkles]
+> 这是自定了 `名称` 和 `图标` 的提示框
 
 <br>
-
-```markdown
-> [!tip]
-> 这是绿色提示框，内部也支持 `Markdown` 语法
-```
-
-> [!tip]
-> 这是绿色提示框，内部也支持 `Markdown` 语法
-
-```markdown
-> [!attention|label:自定义名称|icon:fa-solid fa-wand-magic-sparkles]
-> 这是自定义名称，图标的红色提示框
-```
-
-> [!attention|label:自定义名称|icon:fa-solid fa-wand-magic-sparkles]
-> 这是自定义名称，图标的红色提示框
-
-<br>
-
-- 参数说明，使用英文符号 `|` 分隔参数，前后不能有空格
-- 除!关键词外，其余参数顺序不定 
 
 | 参数名称 | 取值说明 |
 | --------------- | ---- |
-| !关键词 | `!tip` `!note` `!warning` `!attention` ，开头为英文符号! |
-| style |  `callout`(default) 或 `flat` |
-| label  | `关键词`(default) 或 自定义中英文或空格，不能有符号 |
-| icon  | 如上图 (default) 或 使用 `FontAwesome6`, e.g. `fas fa-comment` |
-| labelVisibility | `visible` (default) 或 `hidden` |
-| iconVisibility  | `visible` (default) 或 `hidden` |
+| label  | `提示`(default) 或 自定义中英文或空格，不能有符号 |
+| icon  | `fa-solid fa-lightbulb fa-bounce` (default) 或 使用其他 `FontAwesome6` 图标 |
 
-- `FontAwesome6` 额外支持动画效果，在名称后面加上动画名称即可
-- 如 `fa-solid fa-heart` -> `fa-solid fa-heart fa-bounce`
+`FontAwesome6` 支持动画效果，在图标名称后面加上动画代码即可
 
-| 效果 | 代码|
-| :---: | :---: |
-| :fa-solid fa-heart: | 原始 |
-| :fa-solid fa-heart fa-beat: | fa-beat |
-| :fa-solid fa-heart fa-fade: | fa-fade |
-| :fa-solid fa-heart fa-bounce: | fa-bounce |
-| :fa-solid fa-heart fa-spin: | fa-spin |
-| :fa-solid fa-heart fa-shake:  | fa-shake |
-| :fa-solid fa-heart fa-flip: | fa-flip |
+| 原始 | fa-beat | fa-fade | fa-bounce | fa-spin | fa-shake | fa-flip |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| :fa-solid fa-lightbulb: | :fa-solid fa-lightbulb fa-beat: | :fa-solid fa-lightbulb fa-fade: | :fa-solid fa-lightbulb fa-bounce: | :fa-solid fa-lightbulb fa-spin: | :fa-solid fa-lightbulb fa-shake: | :fa-solid fa-lightbulb fa-flip: |
 
-*更多有关 FontAwesome6的内容，可以访问 [FontAwesome6中文官网](https://fa6.dashgame.com/) 查看详情*
+*更多定制的内容，可以访问 [docsify-plugin-flexible-alerts](https://github.com/fzankl/docsify-plugin-flexible-alerts) 和 [FontAwesome6](https://fa6.dashgame.com/) 查看详情*
 
-## 修改文档-Tab框
+## 使用Tab分类框
 
-- 文本中使用了 `Tab` 框进行内容分类，用法如下
+本文档中使用了 `Tab` 框进行内容分类，用法如下
 
 ```markdown
 <!-- tabs:start -->
@@ -177,6 +139,7 @@ Listening at http://localhost:3000
 English
 
 <!-- tabs:end -->
+
 ```
 
 <!-- tabs:start -->

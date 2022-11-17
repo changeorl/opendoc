@@ -1,9 +1,9 @@
-> [!tip|label: 加入我们！|icon:fa-solid fa-user fa-bounce]
+> [!note|label: 加入我们！|icon:fa-solid fa-user fa-bounce]
 > 现在就加入启智社区，尽享普惠算力。[立即注册](https://git.openi.org.cn/user/sign_up)
 
 ## 平台介绍
 
-> [!tip|label:启智社区|icon:fas fa-house|style:flat]
+> [!note|label:启智社区|icon:fas fa-house|style:flat]
 > `启智AI协作平台`，简称 `启智社区` ，是一个开源在线Web应用，旨在为人工智能算法、模型开发提供在线协同工作环境，它提供了代码托管、数据集管理与共享、免费云端算力资源支持(GPU/NPU)、共享镜像等功能。启智社区是基于Gitea发展而来的，我们对其进行了Fork并基于此扩展了人工智能开发中需要的功能，如数据集管理和模型训练等。对于和代码托管相关的功能，您可以参考Gitea的文档。
 
 <img src="_media/openi/HOME0.png" width = "800" alt="homepage" align=center />

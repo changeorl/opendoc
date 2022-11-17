@@ -16,7 +16,7 @@
 | [训练任务](https://git.openi.org.cn/OpenIOSSG/MNIST_PytorchExample_GPU) | A100 |外部公开镜像，如dockerhub镜像；平台镜像；| 能连外网|平台解压数据集| 训练脚本存储在 /code 中，数据集存储在 /dataset 中，预训练模型存放在运行参数 ckpt_url 中，训练输出请存储在 /model 中以供后续下载。 |
 | [推理任务](https://git.openi.org.cn/OpenIOSSG/MNIST_PytorchExample_GPU/src/branch/master/inference.py)	 | V100 | 平台镜像；| 不能连外网 |平台解压数据集| 数据集存储在 /dataset 中，模型文件存储在 /model 中，推理输出请存储在 /result 中以供后续下载。 |
 | [评测任务](https://git.openi.org.cn/OpenIOSSG/aisafety)	 | V100 | 平台镜像；| 不能连外网 |平台解压数据集|  |
->[!warning|label:备注|icon:fa-sharp fa-solid fa-pen]
+>[!note|label:备注|icon:fa-solid fa-lightbulb fa-bounce]
 >启智集群V100不能连外网，只能使用平台的镜像，不可使用外部公开镜像，否则任务会一直处于waiting状态
 #### **🐶NPU**
 | 任务类型 | 卡类型 | 可用镜像 |  网络类型 |数据集处理方式|容器目录说明|
@@ -34,7 +34,7 @@
 |--------------|:-:|:------:|:------:|:--------|:---------|
 | [训练任务](https://git.openi.org.cn/OpenIOSSG/MNIST_PytorchExample_GPU/src/branch/master/train_for_c2net.py) | V100 |	外部公开镜像，如dockerhub镜像；平台镜像；| 不能连外网|用户自行解压数据集| 训练脚本存储在 /tmp/code 中，数据集存储在 /tmp/dataset 中，预训练模型存放在运行参数 ckpt_url 中，训练输出请存储在 /tmp/output 中以供后续下载。 |
 | [训练任务](https://git.openi.org.cn/OpenIOSSG/MNIST_PytorchExample_GPU/src/branch/master/train_for_c2net.py) | A100 |	外部公开镜像，如dockerhub镜像；平台镜像；| 能连外网|用户自行解压数据集| 训练脚本存储在 /tmp/code 中，数据集存储在 /tmp/dataset 中，预训练模型存放在运行参数 ckpt_url 中，训练输出请存储在 /tmp/output 中以供后续下载。 |
->[!warning|label:备注|icon:fa-sharp fa-solid fa-pen]
+>[!note|label:备注|icon:fa-solid fa-lightbulb fa-bounce]
 >启智集群V100不能连外网，只能使用平台的镜像，不可使用外部公开镜像，否则任务会一直处于waiting状态
 #### **🐱NPU**
 | 任务类型 | 卡类型 | 可用镜像 |  网络类型 |数据集处理方式|容器目录说明|

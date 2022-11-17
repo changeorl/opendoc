@@ -19,6 +19,7 @@
         - 更改邮箱通知设置
 - 删除账户
 
-!> 一经删除，账户无法恢复，请谨慎操作
+>[!attention|label:注意|icon:fa-solid fa-triangle-exclamation  fa-beat-fade]
+> 一经删除，账户无法恢复，请谨慎操作
 
 <img src="_media/others/setting.png" width = "600" alt="homepage" align=center />

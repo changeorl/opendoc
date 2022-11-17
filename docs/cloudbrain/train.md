@@ -1,6 +1,6 @@
 # 训练任务
 
-> [!tip]
+>[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
 > - 训练任务同推理任务的流程一致
 > - 唯一不同的是推理任务需要你预先导入模型到项目中
 
@@ -13,7 +13,7 @@
     - [GPU示例代码](https://openi.pcl.ac.cn/OpenIOSSG/MNIST_PytorchExample_GPU)
     - [NPU示例代码](https://openi.pcl.ac.cn/OpenIOSSG/MNIST_Example)
 
-> [!tip]
+>[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
 > - 训练任务只会执行一个脚本代码文件
 > - 当你创建自己的训练任务时，请在代码仓提交一个单独的训练脚本
 

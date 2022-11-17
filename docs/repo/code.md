@@ -1,5 +1,5 @@
 
-> [!tip|label:提示|icon:fa-solid fa-bell fa-beat]
+>[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
 > - 你将会在这一步提交代码文件。
 > - 如果你的 `模型定义` 和 `训练脚本` 在不同的代码文件里，请务必将他们全部提交。
 > - `数据集` 将储存到别的位置，请勿将 `数据集` 上传到代码仓。

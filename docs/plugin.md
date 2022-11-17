@@ -32,7 +32,7 @@ Bonjour!
 
 
 
-> [!TIP|style:flat]
+> [!note|style:flat]
 > styple `flat`
 
 
