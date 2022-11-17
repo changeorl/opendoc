@@ -142,11 +142,11 @@ Listening at http://localhost:3000
 | !关键词 | `!tip` `!note` `!warning` `!attention` ，开头为英文符号! |
 | style |  `callout`(default) 或 `flat` |
 | label  | `关键词`(default) 或 自定义中英文或空格，不能有符号 |
-| icon  | 如上图 (default) 或 使用 [FontAwsome](https://fontawesome.com/search?o=r&m=free), e.g. `fas fa-comment` |
+| icon  | 如上图 (default) 或 使用 `FontAwesome6`, e.g. `fas fa-comment` |
 | labelVisibility | `visible` (default) 或 `hidden` |
 | iconVisibility  | `visible` (default) 或 `hidden` |
 
-- `FontAwsome` 额外支持动画效果，在名称后面加上动画名称即可
+- `FontAwesome6` 额外支持动画效果，在名称后面加上动画名称即可
 - 如 `fa-solid fa-heart` -> `fa-solid fa-heart fa-bounce`
 
 | 效果 | 代码|
@@ -157,7 +157,9 @@ Listening at http://localhost:3000
 | :fa-solid fa-heart fa-bounce: | fa-bounce |
 | :fa-solid fa-heart fa-spin: | fa-spin |
 | :fa-solid fa-heart fa-shake:  | fa-shake |
-| :fa-solid fa-heart fa-flip: | faflip |
+| :fa-solid fa-heart fa-flip: | fa-flip |
+
+*更多有关 FontAwesome6的内容，可以访问 [FontAwesome6中文官网](https://fa6.dashgame.com/) 查看详情*
 
 ## 修改文档-Tab框
 
@@ -188,3 +190,4 @@ English
 English
 
 <!-- tabs:end -->
+
