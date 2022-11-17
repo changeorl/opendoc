@@ -35,3 +35,4 @@
     - [文档层级](/others/hierarchy.md)
 
 - [常见问题](FAQ.md)
+- [帮助改进](helper.md)
