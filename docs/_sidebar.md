@@ -37,5 +37,3 @@
 
 - [常见问题](others/FAQ.md)
 - [帮助改进](others/helper.md)
-
-- [回到启智社区](https://git.openi.org.cn/)
