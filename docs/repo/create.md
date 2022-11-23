@@ -1,7 +1,10 @@
 ## 创建
 
-- [点击这里](https://git.openi.org.cn/repo/create) 创建一个新项目
-- 你也可以在启智平台的导航栏右侧，找到 `➕` 图标，点击下拉菜单中的 **创建项目** 来新建一个项目。
+- 你可以在`导航栏`右侧找到 `➕` 图标，点击下拉菜单中的 `创建项目` 
+- 或者直接点击 [快速创建新项目](https://git.openi.org.cn/repo/create) 创建一个新项目
+
+<img src="_media/repo/create-buttom-mag.png" width = "800" alt="homepage" align=center />
+
 - 进入创建项目详情界面，以下3项必须填选
     - 填写 `项目名称`
     - 勾选 `初始化储存库` 

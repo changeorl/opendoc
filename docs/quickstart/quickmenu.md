@@ -1,11 +1,15 @@
 # 文档速览
 
 > 点击下面标签页里的链接，快速定位到功能文档位置。
-> 你也可以按照侧边的导航栏，依序查看启智AI协作平台的所有文档。
 
 *若无链接，则该功能文档还在开发中*
 
 <!-- tabs:start -->
+
+#### **快速开始**
+
+- [PyTorch手写识别GPU训练](quickstart/quickstartGPU.md)
+- [MindSpore手写识别NPU训练](quickstart/quickstartNPU.md)
 
 #### **平台介绍**
 
@@ -40,7 +44,9 @@
 
 #### **其他**
 
-- [用户设置](user/user.md)
-- [常见问题](user/FAQ.md)
+- [用户设置](others/user.md)
+- [文档层级](others/hierarchy.md)
+- [常见问题](others/FAQ.md)
+- [帮助改进](others/helper.md)
 
 <!-- tabs:end -->
