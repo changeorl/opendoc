@@ -1,6 +1,6 @@
 # 本地上传
 
-> 导入本地模型需要先创建模型页，再上传模型文件
+> 不同于在线任务导入，本地模型需要先创建模型页，再上传模型文件
 
 - 在模型界面点右侧上方，点击 <img src="_media/model/local-buttom.png" width = "100" alt="traindetail" align=center /> 即可跳转模型上传界面
 

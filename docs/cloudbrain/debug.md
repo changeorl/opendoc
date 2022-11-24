@@ -1,17 +1,19 @@
 # 调试任务
 
+ 项目页面的 `云脑`->`调试任务`->`新建调试任务` 可以开启调试任务
+
 <img src="_media/cloudbrain/debug/start.png" width = "800" alt="traindetail" align=middle />
 
 >[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
-> - 在GPU调试代码中使用数据集时，请使用绝对路径，如 `/dataset/数据集解压文件夹/`
-> - 在NPU调试代码中使用数据集时，需要使用 `wget` 与 `unzip` 命令行指令下载解压数据集
-> - 建议使用清华镜像安装Python包以及搭建Anaconda，详情请查看[清华镜像官方](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
+> - 调试任务将启动 `镜像容器`，GPU任务与NPU任务的容器有着不同的文件路径，与数据集使用方法
+>   - 在GPU调试代码中使用数据集时，请使用绝对路径，如 `/dataset/数据集解压文件夹/`
+>   - 在NPU调试代码中使用数据集时，需要使用 `wget` 与 `unzip` 命令行指令下载解压数据集
+> - 调试任务将会在镜像容器里提供 `Jupyter Lab` 控制，包含 `Terminal` 与 `Notebook` 功能
+>   - 建议使用清华镜像安装Python包以及搭建Anaconda，详情请查看[清华镜像官方](https://mirrors.tuna.tsinghua.edu.cn/help/pypi/)
+> - 启动调试任务时，当状态由 `WAITING` 转为 `RUNNING` 后，需继续等待3-5分钟，提前点击调试会看到 `502错误界面`， 请退出并耐心等待
 > - 调试任务的时长限制为4小时，未关闭的调试任务将在4小时后自动关闭
 
-- 在项目页面的 `云脑`->`调试任务`->`新建调试任务` 可以开启调试任务
-- 调试任务将启动 `镜像容器`，GPU任务与NPU任务的容器有着不同的文件路径，与数据集使用方法
-- 调试任务将会在镜像容器里提供 `Jupyter Lab` 控制，包含 `Terminal` 与 `Notebook` 功能
-- 启动调试任务时，当状态由 `WAITING` 转为 `RUNNING` 后，需继续等待3-5分再点击 `调试` 跳转到控制台，提前点击 `调试` 会看到 `502错误界面`， 请退出并耐心等待
+
 
 <!-- tabs:start -->
 
@@ -64,8 +66,6 @@
 
 ### GPU 调试任务示例
 
-*开始之前，请将[快速开始: PyToch手写识别GPU训练任务实例](quickstart/quickstartGPU.md#代码提交)中的示例代码提交到你的代码仓*
-
 *新建一个云脑调试任务，填入以下参数*
 
 > [!note|label:填写以下参数|icon:fa-solid fa-list fa-bounce]
@@ -110,7 +110,7 @@
 - 点击新建 `Terminal` 窗口，输入下列命令行指令检查数据集文件路径是否存在
 
 ```shell
-# ls /dataset/imagenet-sample/train/n01986214
+ls /dataset/imagenet-sample/train/n01986214
 ```
 
 <img src="_media/cloudbrain/debug/gpu_datapath.png" width = "800" alt="traindetail" align=middle />
@@ -120,7 +120,7 @@
 - 安装完成后使用 `pip show matplotlib` 查看是否安装成功
 
 ```shell
-# pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 <img src="_media/cloudbrain/debug/gpu_pip.png" width = "800" alt="traindetail" align=middle />
@@ -142,31 +142,9 @@ plt.show()
 
 <img src="_media/cloudbrain/debug/gpu_code.png" width = "800" alt="traindetail" align=middle />
 
-- 新建 `Python Console`，输入下列代码查看 `Pytorch` 及 `cuda GPU 版本`
-
-```Python
-import torch
-
-torch.__version__
-# "1.10.0"
-
-torch.cuda.is_available()
-# True
-```
-
-- 新建 `Terminal`，切换到 `/code` 目录，你可以在这里看到代码仓代码文件
-- 若你未提交[快速开始: PyToch手写识别GPU训练任务实例](quickstart/quickstartGPU.md#代码提交)中的示例代码到代码仓，你可以输入 `touch train.py` 来新建一个Python文件，你可以在左侧的文件列表点击编辑新建文件
-- 输入以下命令行指令运行训练脚本
-
-```shell
-# python train.py --traindata /dataset/MnistDataset_torch/train --testdata /dataset/MnistDataset_torch/test
-```
-
-<img src="_media/cloudbrain/debug/gpu_torch.png" width = "800" alt="traindetail" align=middle />
-
 > [!note|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经成功在GPU环境下启用调试任务并读取数据。\
-> 你可以[回到顶部](/cloudbrain/debug.md#npu-新建调试任务)查看NPU的调试任务介绍，或者点击下一卷前往镜像介绍
+> 你可以回到顶部查看[NPU的调试任务介绍](/cloudbrain/debug.md#npu-新建调试任务)，或者点击下一卷前往镜像介绍
 
 
 
@@ -186,9 +164,9 @@ torch.cuda.is_available()
 
 <img src="_media/cloudbrain/debug/npu_create.png" width = "800" alt="traindetail" align=middle />
 
-### NPU Jupyter Lab 控制台
+### NPU Model Arts 控制台
 
-*与GPU调试任务，NPU调试也提供Jupyter Lab控制台*
+*与GPU调试任务不同，NPU调试提供华为 [Model Arts](https://support.huaweicloud.com/modelarts/index.html) 控制台*
 
 <img src="_media/cloudbrain/debug/npu_lab.png" width = "800" alt="traindetail" align=middle />
 
@@ -198,12 +176,8 @@ torch.cuda.is_available()
 
 - NPU调试任务需要手动下载代码仓与数据集
 - 你不需要改变NPU调试环境的工作目录，所有文件都应放在默认路径下
-
-<img src="_media/cloudbrain/debug/npu_path.png" width = "800" alt="traindetail" align=middle />
-
-
-- 在控制台中，点击左侧搜索框上方最左边的Git图标，输入代码仓地址
-- 你也可以在 Terminal 中使用 git clone 来克隆代码仓
+- 在控制台中，点击左侧搜索框上方最右边的Git图标，输入代码仓地址
+- 你也可以在 `Terminal` 中使用 `git clone` 来克隆代码仓
 
 <img src="_media/cloudbrain/debug/npu_git.png" width = "800" alt="traindetail" align=middle />
 
@@ -211,7 +185,7 @@ torch.cuda.is_available()
 
 <img src="_media/cloudbrain/debug/npu_datalink.png" width = "800" alt="traindetail" align=middle />
 
-- 输入下列命令行指令，使用 wget -O 自定义数据集名称 下载地址 来下载数据集压缩包
+- 输入下列命令行指令，使用 `wget -O 自定义数据集名称 '下载地址'` 来下载数据集压缩包
 
 ```shell
 wget -O dataset 'https://open-data.obs.cn-south-222.ai.pcl.cn:443/attachment/2/1/21f17b25-2a3e-4b42-a717-5547b72036cd/imagenet-sample.zip?response-content-disposition=attachment%3B+filename%3D%22imagenet-sample.zip%22&AWSAccessKeyId=ZSCXA9TLRN1USYWIF7A5&Expires=1668419095&Signature=xcL10IAPRSjAkEjNlITwD3CsFXM%3D'
@@ -247,7 +221,7 @@ plt.show()
 
 > [!note|label:调试成功|icon:fa-sharpe fa-solid fa-check fa-beat]
 > 🎉 恭喜你！你已经成功在NPU环境下启用调试任务并读取数据。\
-> 你可以[回到顶部](/cloudbrain/debug.md#gpu-新建调试任务)查看GPU的调试任务介绍，或者点击下一卷前往镜像介绍
+> 你可以回到顶部查看[GPU的调试任务介绍](/cloudbrain/debug.md#gpu-新建调试任务)，或者点击下一卷前往镜像介绍
 
 <!-- tabs:end -->
 

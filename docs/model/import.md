@@ -2,6 +2,8 @@
 
 - 在模型界面点右侧上方，点击 <img src="_media/model/online-buttom.png" width = "100" alt="traindetail" align=center /> 即可跳转模型上传界面
 
+<img src="_media/model/list-empty.png" width = "800" alt="traindetail" align=center />
+
 > [!note|label:参数填写|icon:fa-solid fa-list fa-bounce]
 > - **选择训练任务** *选择你要导入的训练任务名称*
 > - **版本** *可忽视，目前平台预设默认值* `V0001`

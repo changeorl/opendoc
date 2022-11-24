@@ -1,8 +1,6 @@
 # 训练任务
 
->[!note|label:提示|icon:fa-solid fa-lightbulb fa-bounce]
-> - 训练任务同推理任务的流程一致
-> - 唯一不同的是推理任务需要你预先导入模型到项目中
+> 训练任务同推理任务的流程一致，不同的是推理任务需要你预先导入模型到项目中
 
 <img src="_media/cloudbrain/train/model_home.png" width = "800" alt="traindetail" align=middle />
 
@@ -17,7 +15,7 @@
 > - 训练任务只会执行一个脚本代码文件
 > - 当你创建自己的训练任务时，请在代码仓提交一个单独的训练脚本
 
-- 你可以在训练脚本中使用下列示例代码来添加训练控制参数
+- 你可以在训练脚本中仿照使用下列示例代码来添加训练控制参数
 
 ```python
 import argparse

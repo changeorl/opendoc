@@ -2,9 +2,9 @@
 
 ## 准备工作
 
-本文档是基于 `Docsify` 构建的，一款小巧轻量的 `Markdown` 文档生成框架 <br>
+本文档是基于 `Docsify` 构建的，一款小巧轻量的 `Markdown` 静态文档生成框架 <br>
 
-如果你想要在你的电脑上启动本地测试，你需要拉取 `本文档代码仓`，以及安装 `Docsify`
+如果你想要在你的电脑上启动本地静态网页，你需要拉取 `本文档代码仓`，以及安装 `Docsify CLI启动器`
 
 ```shell
 # git clone https://openi.pcl.ac.cn/chenzh/opendoc.git
@@ -12,7 +12,7 @@
 ```
 
 >[!note|label:安装须知|icon:fa-solid fa-download fa-bounce]
-> - 安装 `Docsify` 需要使用到 `Node.js` 中的 `npm` 指令
+> - 安装 `Docsify CLI启动器` 需要使用到 `Node.js` 中的 `npm` 指令
 > - `npm` 是随同 `Node.js` 一起安装的包管理工具，你可以使用 `npm -v` 来查看其是否安装在你的电脑上
 > - 若你的电脑未安装 `Node.js`，请移步至 [Node.js官方下载地址](https://nodejs.org/zh-cn/download/) 下载安装
 
@@ -68,17 +68,18 @@ Listening at http://localhost:3000
 
 ## 修改文档
 
-- 在 `_sidebar.md` 中找到文档路径，修改 `.md` 文件即可，建议遵循如下规则
-    - 避免编写大段文字内容，尽量使用简短的文字说明，可以使用列表结构增加可读性
-    - 文档内的二级标题会在侧边栏展开，点击可快速跳转到相应部分
+- 在 `_sidebar.md` 中找到文档路径，修改 `.md` 文档即可，建议遵循如下规则
+    - 避免编写大段文字内容，尽量使用简短的文字说明，可以使用 `列表结构` 增加可读性
+    - 文档内的 `## 二级标题` 会在侧边栏展开，点击可快速跳转到相应部分
     - 使用代码高亮功能 `Highlight` 关键字
+    - 你也可以在文档里使用`html`语法来添加网页元素
 
 ## 插入图片
 
 - 本文档使用嵌入html语法插入图片，并支持点击放大
     - 请将图片放入 `_media/` 文件夹下
     - 浏览器内截图建议使用 `chrome` 中的 `Standardized Screenshot` 插件，可以为图片边缘增加阴影效果
-    - 复制下列代码到 `.md` 文档中，修改 `src` 中图片路径即可插入，其他参数可保持不变
+    - 复制下列范例代码到 `.md` 文档中，修改 `src` 中图片路径即可插入，其他参数可保持不变
 
 ```markdown
 <img src="_media/openi/home.png" width = "600" alt="homepage" align=center/>
@@ -88,7 +89,7 @@ Listening at http://localhost:3000
 
 ## 插入提示框
 
-本文档中使用了提示框插件，默认用法如下
+- 本文档中使用了提示框插件，使用范例如下
 
 ```markdown
 >[!note]
@@ -98,7 +99,7 @@ Listening at http://localhost:3000
 >[!note]
 > 这是提示框规范样式，内部也支持 `Markdown` 语法
 
-你可以自定义提示框来展示其他信息，注意参数分割符 `|` 为英文符号且前后不能有空格
+- 你可以自定义提示框来展示其他信息，注意参数分割符 `|` 为英文符号且前后不能有空格
 
 ```markdown
 >[!note|label:自定义名称|icon:fa-solid fa-wand-magic-sparkles]
@@ -115,28 +116,22 @@ Listening at http://localhost:3000
 | label  | `提示`(default) 或 `自定义中英文或空格`，不能有符号 |
 | icon  | `fa-solid fa-lightbulb fa-bounce` (default) 或 使用其他 `FontAwesome6` 图标 |
 
-`FontAwesome6` 支持动画效果，如默认中的 `fa-bounce 跳动效果`
-
-| 原始 | fa-beat | fa-fade | fa-bounce | fa-spin | fa-shake | fa-flip |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| :fa-solid fa-lightbulb: | :fa-solid fa-lightbulb fa-beat: | :fa-solid fa-lightbulb fa-fade: | :fa-solid fa-lightbulb fa-bounce: | :fa-solid fa-lightbulb fa-spin: | :fa-solid fa-lightbulb fa-shake: | :fa-solid fa-lightbulb fa-flip: |
-
 *更多定制的内容，可以访问 [docsify-plugin-flexible-alerts](https://github.com/fzankl/docsify-plugin-flexible-alerts) 和 [FontAwesome6](https://fa6.dashgame.com/) 查看详情*
 
 ## 使用Tab分类框
 
-本文档中使用了 `Tab` 框进行内容分类，用法如下
+本文档中使用了 `Tab` 框进行内容分类，例如`GPU`与`NPU`，使用范例如下
 
 ```markdown
 <!-- tabs:start -->
 
-#### **zh**
+#### **GPU**
 
-中文
+GPU使用实例
 
-#### **en**
+#### **NPU**
 
-English
+NPU使用实例
 
 <!-- tabs:end -->
 
@@ -144,13 +139,18 @@ English
 
 <!-- tabs:start -->
 
-#### **zh**
+#### **GPU**
 
-中文
+GPU使用实例
 
-#### **en**
+#### **NPU**
 
-English
+NPU使用实例
 
 <!-- tabs:end -->
 
+## 其他
+
+- 可以在 `css/vue.css` 里修改网页样式
+- 若想使用其他插件，需将插件源码文件下载到`docs/js/` 目录下，使用本地路径加载 
+    - *[Docsify插件列表](https://docsify.js.org/#/awesome?id=plugins)*

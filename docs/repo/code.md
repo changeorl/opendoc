@@ -26,7 +26,7 @@
 
 ### 上传提交
 
-- 点击 `上传文件` 按钮，然后点击`虚线区域`选择本地文件，或者将文件直接拖拽到区域内
+- 点击 `上传文件` 按钮，然后点击虚线区域选择本地文件，或者将文件直接拖拽到区域内
 - 你可以在仓库名后面给文件添加`二级目录`
 - 点击 `提交变更` 提交代码文件
 
@@ -55,7 +55,7 @@
 
 <img src="_media/repo/gitbash.png" width = "400" alt="homepage" align=center />
 
-*你也可以使用其他的命令行工具，如 `Windows Powershell`，详情参照[微软官方文档](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2)*
+ *你也可以使用定制化的命令行软件，如Mac上使用[iTerm2](https://iterm2.com/)， Windows上使用[Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)*
 
 #### **Mac**
 
@@ -64,13 +64,13 @@
 #### Homebrew
 请先在你的Mac上面安装 [homebrew](https://brew.sh/)，然后在命令行输入:
 ```
-$ brew install git
+brew install git
 ```
 
 #### MacPorts
 请先在你的Mac上面安装 [MacPorts](https://www.macports.org/)，然后在命令行输入:
 ```
-$ sudo port install git
+sudo port install git
 ```
 
 #### Xcode
@@ -85,22 +85,25 @@ Tim Harper 提供了一个 **Git** 安装程序 [installer](https://sourceforge.
 #### Installing git-gui
 如果你想要安装 **Git交互程序** [git-gui](https://git-scm.com/docs/git-gui/) 和 **Git浏览器** [gitk](https://git-scm.com/docs/gitk/)，你可以使用[homebrew](https://brew.sh/)来安装
 ```
-$ brew install git-gui
+brew install git-gui
 ```
 
 #### 安装成功
 
-打开 **终端Terminal**，输入 `git` 指令，如有以下输出，则系统已安装 **Git**
+打开 `终端Terminal`，输入 `git` 指令，如有以下输出，则系统已安装成功
 
 <img src="_media/repo/gitmac.png" width = "400" alt="homepage" align=center />
+
+ *你也可以使用定制化的命令行软件，如Mac上使用[iTerm2](https://iterm2.com/)， Windows上使用[Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)*
 
 <!-- tabs:end -->
 
 ### 克隆仓库 & 提交代码
 
-- 使用命令行 **Git** 克隆/提交代码需要设置权限。
-- 你可以在代码仓文件列表的右上方找到 **项目链接**。通常有两种方式克隆代码仓，`https` 和 `ssh`。
-- *推荐在Mac上使用[iTerm2](https://iterm2.com/)， Windows上使用[Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)*
+- 使用命令行 `Git` 克隆/提交代码需要设置权限
+- 你可以在代码仓文件列表的右上方找到 `项目链接`，通常有两种方式克隆代码仓，`https` 和 `ssh`
+
+
 
 <!-- tabs:start -->
 
@@ -113,18 +116,18 @@ $ brew install git-gui
 
 ```shell
 #克隆代码仓
-$ git clone https://openi.pcl.ac.cn/chenzh/quickstart.git
-$ cd quickstart
+git clone https://openi.pcl.ac.cn/chenzh/quickstart.git
+cd quickstart
 
 #提交代码
-$ git add .
-$ git commit -m 'update'
-$ git push
+git add .
+git commit -m 'update'
+git push
 username: chenzh
 password: 🔑
 
 #保存账户密码
-$ git config --global credential.helper store
+git config --global credential.helper store
 ```
 
 #### **SSH**
@@ -137,13 +140,13 @@ $ git config --global credential.helper store
 
 ```shell
 #克隆代码仓
-$ git clone git@openi.pcl.ac.cn:chenzh/quickstart.git
-$ cd quickstart
+git clone git@openi.pcl.ac.cn:chenzh/quickstart.git
+cd quickstart
 
 #提交代码
-$ git add .
-$ git commit -m 'update'
-$ git push
+git add .
+git commit -m 'update'
+git push
 ```
 <!-- tabs:end -->
 
