@@ -82,10 +82,10 @@ Listening at http://localhost:3000
     - 复制下列范例代码到 `.md` 文档中，修改 `src` 中图片路径即可插入，其他参数可保持不变
 
 ```markdown
-<img src="_media/openi/home.png" width = "600" alt="homepage" align=center/>
+<img src="_media/home.png" width = "600" alt="homepage" align=center/>
 ```
 
-<img src="_media/openi/home.png" width = "600" alt="homepage" align=center/>
+<img src="_media/home.png" width = "800" alt="homepage" align=center />
 
 ## 插入提示框
 

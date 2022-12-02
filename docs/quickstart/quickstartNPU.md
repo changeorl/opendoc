@@ -1,13 +1,13 @@
 # 快速开始: MindSpore手写识别NPU训练任务实例
 
-> 在本篇中，你将快速学会如何创建项目，并开启一个GPU训练任务。本教程参考 [代码仓](https://openi.pcl.ac.cn/OpenIOSSG/MNIST_Example)
+> 在本篇中，你将快速学会如何创建项目，并开启一个NPU训练任务。本教程参考 [代码仓](https://openi.pcl.ac.cn/OpenIOSSG/MNIST_Example)
 
 ## 派生项目
 
 首先你需要注册一个启智社区的账号。
 
 > [!note|label: 加入我们！|icon:fa-solid fa-user fa-bounce]
-> 现在就加入启智社区，尽享普惠算力。[立即注册](https://git.openi.org.cn/user/sign_up)
+> 现在就加入启智社区，尽享普惠算力。[立即注册](https://openi.pcl.ac.cn/user/sign_up)
 
 - 注册成功之后，请点击 [Fork示例代码仓](https://openi.pcl.ac.cn/repo/fork/29805)，填写项目名称并点击派生项目
 - `派生项目` 指创建一个 `示例代码仓` 的副本到你的账户下
@@ -72,7 +72,7 @@
 > [!note|label:填写以下参数|icon:fa-solid fa-list fa-bounce]
 > - **算力集群** *启智集群*
 > - **计算资源** *Ascend NPU*
-> - **任务名称** *mnis-npu*
+> - **任务名称** *mnist-npu*
 > - **AI引擎** *Ascend-Powered-Engine，MindSpore 1.7-c81-python3.7-euleros2.8-aarch64*
 > - **启动文件** *train.py*
 > - **数据集** *本项目关联 MNISTData_mindspore/MnistDataset.zip*
@@ -101,7 +101,7 @@
 
 #### **日志查看**
 
-这里是脚本文以及 `ModelArt` 中的所有输出打印，也叫做你的 `任务日志`。
+这里是脚本文件以及 `ModelArt` 中的所有输出打印，也叫做你的 `任务日志`。
 
 <img src="_media/quickstart/npu_log.png" width = "800" alt="traindetail" align=middle />
 

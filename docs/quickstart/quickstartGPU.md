@@ -8,12 +8,12 @@
 首先你需要注册一个启智社区的账号。
 
 > [!note|label: 加入我们！|icon:fa-solid fa-user fa-bounce]
-> 现在就加入启智社区，尽享普惠算力。[立即注册](https://git.openi.org.cn/user/sign_up)
+> 现在就加入启智社区，尽享普惠算力。[立即注册](https://openi.pcl.ac.cn/user/sign_up)
 
-- 注册成功之后，请 [点击这里](https://git.openi.org.cn/repo/create) 创建新项目。
+- 注册成功之后，请 [点击这里](https://openi.pcl.ac.cn/repo/create) 创建新项目。
 - 进入创建项目详情界面
     - 填写 `项目名称`
-    - 勾选 `初始化储存库` 
+    - 勾选 `初始化存储库` 
     - 勾选 `承诺遵守平台使用协议`
     - 点击 `创建项目`
 
@@ -202,7 +202,8 @@ if __name__ == '__main__':
 > - **任务名称** *mnis_pytorch_gpu*
 > - **镜像** 复制并粘贴地址 *dockerhub.pcl.ac.cn:5000/user-images/openi:cuda111_python37_pytorch191*
 > - **启动文件** *train.py*
-> - **数据集** *本项目关联 MNIST/MnistDataset_torch.zip*
+> - **数据集** *本项目关联 MNIST_PytorchExample_GPU/MnistDataset_torch.zip*
+> - **资源规格** *GPU:1*V100,CPU:4,内存:32GB,共享内存:16GB*
 > - **其他配置保持默认值即可**
 
  <img src="_media/quickstart/train_detail.png" width = "800" alt="homepage" align=center />

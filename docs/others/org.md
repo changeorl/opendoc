@@ -7,6 +7,8 @@
 
 <img src="_media/repo/create-buttom-mag.png" width = "600" alt="homepage" align=center />
 
+<br>
+
 <img src="_media/others/org-create.png" width = "600" alt="homepage" align=center />
 
 ### 组织中心
@@ -38,6 +40,8 @@
 - 你可以在组织首页的`成员列表`下或`组织首页`->`组织团队`右上角找到 `新建团队`
 
 <img src="_media/others/org-group.png" width = "600" alt="homepage" align=center />
+
+<br>
 
 <img src="_media/others/org-group-create.png" width = "600" alt="homepage" align=center />
 

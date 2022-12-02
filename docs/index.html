@@ -2,14 +2,15 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>OpenIdoc</title>
+  <title>启智社区文档</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="启智社区开发者使用文档">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
+  <link rel="icon" href="https://openi.pcl.ac.cn/img/favicon.png">
   <link rel="stylesheet" href="css/vue.css" />
   <!--link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css"-->
-  <link href="css/font-awswome/css/all.css" rel="stylesheet">
+  <link href="css/font-awesome/css/all.css" rel="stylesheet">
 
   <style>
 
@@ -18,21 +19,22 @@
 </head>
 <body>
   <nav>
-    <a href="https://git.openi.org.cn/chenzh/opendoc/issues/new" target='_blank' style="font-family:Hei; font-size:13px; color:#0d8242">意见反馈</a>
-    <a href="https://git.openi.org.cn/" target='_blank' style="font-family: Hei; font-size:13px; color:#0d8242">回到启智社区</a>
+    <a href="https://openi.pcl.ac.cn/OpenIOSSG/opendoc" target='_blank' style="font-family:Hei; font-size:13px; color:#0d8242">意见反馈</a>
+    <a href="https://openi.pcl.ac.cn/" target='_blank' style="font-family: Hei; font-size:13px; color:#0d8242">回到启智社区</a>
   </nav>
   <div id="app" style="transform:scale(0.8,0.8);">喝杯咖啡休息一下，马上回来</div>
   <script>
     window.$docsify = {
-      name: '<p style= "font-family:Sans-serif;font-size:5;color:#0d8242;font-weight:bold"><i class="fa-solid fa-file-lines fa-beat"></i> 启智社区文档</p>',
-      nameLink: '/',
+      name: '<p style= "font-family:Sans-serif;font-size:5;color:#0d8242;font-weight:bold"><i class="fa-solid fa-file-lines"></i> 启智社区文档</p>',
       loadSidebar: true,
       auto2top: true,
       subMaxLevel: 2,
       themeColor: '#0d8242',
       topMargin: 20,
       mergeNavbar: true,
-
+      alias: {
+            '/.*/_sidebar.md': '/_sidebar.md'
+      },
       search: {
         maxAge: 86400000,
         paths: 'auto',
@@ -60,12 +62,6 @@
         theme:'material',
         persist:'false',
         sync:'false',
-      },
-
-      progress: {
-        position: "top",
-        color: "var(--theme-color,#42b983)",
-        height: "3px",
       },
 
       'flexible-alerts': {
@@ -102,11 +98,9 @@
   <script src="js/docsify-sidebar-collapse.min.js"></script>
   <!-- fontawesome https://github.com/zignis/docsify-fa >
   <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script-->
-  <script src="css/font-awsome/js/all.js"></script>
+  <script src="css/font-awesome/js/all.js"></script>
   <!-- docsify-select (latest v1.x.x) -->
   <script src="js/docsify-select.js"></script>
-  <!-- progress bar-->
-  <script src="js/progress.js"></script>
 
 
 </body>

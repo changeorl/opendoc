@@ -1,7 +1,7 @@
 ## 创建
 
 - 你可以在`导航栏`右侧找到 `➕` 图标，点击下拉菜单中的 `创建项目` 
-- 或者直接点击 [快速创建新项目](https://git.openi.org.cn/repo/create) 创建一个新项目
+- 或者直接点击 [快速创建新项目](https://openi.pcl.ac.cn/repo/create) 创建一个新项目
 
 <img src="_media/repo/create-buttom-mag.png" width = "800" alt="homepage" align=center />
 

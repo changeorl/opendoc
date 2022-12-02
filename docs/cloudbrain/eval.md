@@ -12,6 +12,6 @@
 
 - 通过该基准测试脚本完成全程测试，查看测试结果，并选择是否参与排行榜排名
 
-关于如何上传基准测试的检测代码，你可以直接点击或搜索[CV_benchmark](https://git.openi.org.cn/CV_benchmark/CV_reID_benchmark#)项目，将test.py和train.py这两个测试脚本和训练脚本文件放至项目代码下，便可参与测试
+关于如何上传基准测试的检测代码，你可以直接点击或搜索[CV_benchmark](https://openi.pcl.ac.cn/yangzhx/CV_benchmark_intro)项目，将test.py和train.py这两个测试脚本和训练脚本文件放至项目代码下，便可参与测试
 
 <img src="_media/cloudbrain/eval/algo_eval.png" width = "800" alt="traindetail" align=middle />

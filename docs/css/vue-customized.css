@@ -64,7 +64,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #34495e;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 0;
   margin: 0;
   overflow-x: hidden;
@@ -258,6 +258,7 @@ main.hidden {
   list-style: none;
 }
 .sidebar ul li a {
+  font-size: 13px;
   border-bottom: none;
   display: block;
 }
@@ -608,11 +609,11 @@ body {
   margin: 6px 0 6px 0;
 }
 .sidebar ul li p {
-  font-size: 14px;
+  font-size: 13px;
 }
 .sidebar ul li a {
   color: #505d6b;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   overflow: hidden;
   text-decoration: none;
@@ -620,12 +621,12 @@ body {
   white-space: nowrap;
 }
 .sidebar ul li a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .sidebar ul li p:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .sidebar ul li ul {
   padding: 0;
@@ -656,15 +657,15 @@ body {
   font-weight: 600;
 }
 .markdown-section h1 {
-  font-size: 2rem;
+  font-size: 25px;
   margin: 0 0 1rem;
 }
 .markdown-section h2 {
-  font-size: 1.75rem;
+  font-size: 20px;
   margin: 45px 0 0.8rem;
 }
 .markdown-section h3 {
-  font-size: 1.5rem;
+  font-size: 15px;
   margin: 40px 0 0.6rem;
 }
 .markdown-section h4 {

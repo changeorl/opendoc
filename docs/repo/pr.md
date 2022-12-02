@@ -22,8 +22,8 @@
 <img src="_media/repo/issuedetail.png" width = "800" alt="homepage" align=center />
 
 >[!note|label:创建第一个ISSUE|icon:fa-sharp fa-solid fa-circle-info fa-bounce]
-> - [帮助启智社区](https://git.openi.org.cn/OpenI/aiforge/issues) 提出你对`启智AI协作平台` 的建议或者问题，我们很乐意跟你一起进步
-> - [改进本文档](https://git.openi.org.cn/chenzh/opendoc/issues) 帮助改进或补充本文档内容，当然你也可以在文档任何地方点击右上角的 **意见反馈**
+> - [帮助启智社区](https://openi.pcl.ac.cn/OpenI/aiforge/issues) 提出你对`启智AI协作平台` 的建议或者问题，我们很乐意跟你一起进步
+> - [改进本文档](https://openi.pcl.ac.cn/chenzh/opendoc/issues) 帮助改进或补充本文档内容，当然你也可以在文档任何地方点击右上角的 **意见反馈**
 
 ## 合并请求
 
